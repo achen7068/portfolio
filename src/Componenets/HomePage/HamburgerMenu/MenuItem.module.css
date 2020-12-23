@@ -20,5 +20,5 @@
     background: grey;
     margin: 0 auto;
     animation: 0.5s shrinks forwards;
-    animation-delay: initial;
+    animation-delay: inherit;
 }

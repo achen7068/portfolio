@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from 'MenuItem.module.css';
+
 
 function MenuItem(props) {
 
@@ -10,8 +12,14 @@ function MenuItem(props) {
 
 
     return (
-        <div>
-
+        <div className={styles.container}>
+            <div className={styles.menuItem}
+            onMouseEnter={() => handleHover()}
+            onMouseLeave={() => handleHover()}
+            onClick={props.onclick}>
+                {props.children}
+            </div>
+            <div className={styles.line}></div>
         </div>
     );
 }
