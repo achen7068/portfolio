@@ -19,9 +19,9 @@ export default function HamburgerMenu() {
             <menuItems
                 key={index}
                 delay={`${index * 0.1}s`}
-                onClick={()=>{handleLinkClick();}}>{value}>
-                <menuItems/>
-        )
+                onClick={()=>{handleLinkClick();}}>{value}</menuItems>)
+
+
     });
 
         return (
@@ -31,6 +31,6 @@ export default function HamburgerMenu() {
                 </div>
             </div>
         )
-                }
+}
 
 
