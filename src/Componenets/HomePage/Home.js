@@ -8,7 +8,7 @@ function Home() {
             <div className={styles.header}>
                 Alex Chen
             </div>
-            <HamburgerMenu/>
+                <HamburgerMenu/>
         <div className={styles.title}>
             React Front-End Developer
         </div>

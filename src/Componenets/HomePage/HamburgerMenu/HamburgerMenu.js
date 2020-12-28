@@ -2,6 +2,7 @@ import React from 'react';
 import MenuButton from "./MenuButton/MenuButton";
 import Menu from "./Menu/Menu";
 import MenuItem from "./MenuItem/MenuItem";
+import styles from './HamburgerMenu.module.css'
 
 
 class hamburgerMenu extends React.Component {
@@ -23,20 +24,20 @@ class hamburgerMenu extends React.Component {
     render(){
         const styles=
             {
-                container:{
+                container: {
                     position: 'absolute',
-                    top: 0,
-                    left: 0,
+                    top: '1%',
+                    right: '0%',
                     zIndex: '99',
-                    opacity: 0.9,
-                    display:'flex',
-                    alignItems:'center',
-                    background: 'black',
-                    width: '100%',
+                    opacity: 2,
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: '3%',
                     color: 'white',
-                    fontFamily:'Lobster',
-                },
+                    fontFamily: 'Lobster',
+                }
             }
+
         const menu = ['About Us','Our Products','Services','FAQ','Contact Us']
         const menuItems = menu.map((val,index)=>{
             return (
@@ -49,7 +50,7 @@ class hamburgerMenu extends React.Component {
         return(
             <div>
                 <div style={styles.container}>
-                    <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()} color='white'/>
+                    <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()} color={'white'}/>
                 </div>
                 <Menu open={this.state.menuOpen}>
                     {menuItems}
