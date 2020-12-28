@@ -4,7 +4,7 @@ import Menu from "./Menu/Menu";
 import MenuItem from "./MenuItem/MenuItem";
 
 
-class HamburgerMenu extends React.Component {
+class hamburgerMenu extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -35,7 +35,7 @@ class HamburgerMenu extends React.Component {
                     width: '100%',
                     color: 'white',
                     fontFamily:'Lobster',
-                }
+                },
             }
         const menu = ['About Us','Our Products','Services','FAQ','Contact Us']
         const menuItems = menu.map((val,index)=>{
@@ -58,6 +58,7 @@ class HamburgerMenu extends React.Component {
         )
     }
 }
-export default HamburgerMenu
+
+export default hamburgerMenu;
 
 

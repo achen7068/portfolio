@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Menu extends Component {
-
-    constructor(props) {
+class Menu extends React.Component {
+    constructor(props){
         super(props);
         this.state={
-            open: this.props.open? this.props.open:false
+            open: this.props.open? this.props.open:false,
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps){
         if(nextProps.open !== this.state.open){
             this.setState({open:nextProps.open});
         }
     }
 
-    render() {
+    render(){
         const styles={
             container: {
                 position: 'absolute',
@@ -35,8 +34,8 @@ class Menu extends Component {
                 paddingTop: '3rem',
             }
         }
-        return (
-            <div className={styles.container}>
+        return(
+            <div style={styles.container}>
                 {
                     this.state.open?
                         <div style={styles.menuList}>
@@ -44,8 +43,9 @@ class Menu extends Component {
                         </div>:null
                 }
             </div>
-        );
+        )
     }
 }
+
 
 export default Menu;

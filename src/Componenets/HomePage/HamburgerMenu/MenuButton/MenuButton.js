@@ -1,27 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class MenuButton extends Component {
-
-    constructor(props) {
+class MenuButton extends React.Component {
+    constructor(props){
         super(props);
         this.state={
             open: this.props.open? this.props.open:false,
-            color: this.props.color? this.props.color:'black'
+            color: this.props.color? this.props.color:'black',
         }
     }
 
-    componentWillReceiveProps(nextProps, nextContext) {
-        if(nextProps.open !== this.state.open) {
+    componentWillReceiveProps(nextProps){
+        if(nextProps.open !== this.state.open){
             this.setState({open:nextProps.open});
         }
     }
 
     handleClick(){
-        this.setState({open:!this.state.open})
+        this.setState({open:!this.state.open});
     }
 
-    render() {
-
+    render(){
         const styles = {
             container: {
                 height: '32px',
@@ -51,18 +49,18 @@ class MenuButton extends Component {
             lineBottom: {
                 transform: this.state.open ? 'translateX(-1px) rotate(-45deg)':'none',
                 transformOrigin: 'top left',
-                marginTop: '5px'
-            }
+                marginTop: '5px',
+            },
         }
-        return (
-            <div className={styles.container}
-                onClick={this.props.onclick ? this.props.onClick:
-                ()=> {this.handleClick();}}>
+        return(
+            <div style={styles.container}
+                 onClick={this.props.onClick ? this.props.onClick:
+                     ()=> {this.handleClick();}}>
                 <div style={{...styles.line,...styles.lineTop}}/>
                 <div style={{...styles.line,...styles.lineMiddle}}/>
                 <div style={{...styles.line,...styles.lineBottom}}/>
             </div>
-        );
+        )
     }
 }
 
