@@ -38,7 +38,7 @@ class hamburgerMenu extends React.Component {
                 }
             }
 
-        const menu = ['About Us','Our Products','Services','FAQ','Contact Us']
+        const menu = ['Projects','Contact','Resume','About Me']
         const menuItems = menu.map((val,index)=>{
             return (
                 <MenuItem
