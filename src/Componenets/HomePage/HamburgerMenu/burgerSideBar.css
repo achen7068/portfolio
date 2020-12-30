@@ -1,0 +1,69 @@
+html,
+body {
+    margin: 0;
+}
+
+#page-wrap {
+    text-align: center;
+    /* Prevent sidebar from showing a scrollbar on page */
+    overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+
+    /* Our sidebar item styling */
+    text-decoration: none;
+    font-size: 150%;
+    margin-bottom: 10px;
+    color: #d1d1d1;
+    transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+    color: white;
+}
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: absolute;
+    width: 34px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #f3f3f3;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: transparent;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #f3f3f3;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #dedede;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: white;
+}
